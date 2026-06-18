@@ -1,0 +1,65 @@
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+frontend/node_modules/
+frontend/dist/
+
+# Local app data
+data/
+backend/data/
+milestone2/data/
+archive/
+archive/milestone2_data/
+archive/milestone1_data/
+milestone2/
+src/
+knowledge_profile_extract/
+test_data/
+uploads/
+read_output/
+vector_index/
+web_cache/
+**/organized_output/
+**/read_demo_output/
+**/vector_pyqt_output/
+milestone2/new_frontend/vector_pyqt_output/
+*.db
+*.sqlite
+*.sqlite3
+
+# Local media inputs/outputs
+media/
+
+# Large presentation exports
+docs/
+docs/presentations/
+
+# Extra local notes/docs
+SETUP-GUIDE.md
+
+# Large local models
+models/
+backend/models/
+milestone2/models/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db

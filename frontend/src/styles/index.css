@@ -1,0 +1,138 @@
+/* 全局样式入口 */
+@import './tailwind.css';
+
+/* Element Plus 深色主题变量覆盖 */
+:root {
+  --el-color-primary: #3b82f6;
+  --el-color-primary-light-3: #60a5fa;
+  --el-color-primary-light-5: #93c5fd;
+  --el-color-primary-light-7: #bfdbfe;
+  --el-color-primary-light-8: #dbeafe;
+  --el-color-primary-light-9: #eff6ff;
+  --el-color-primary-dark-2: #2563eb;
+}
+
+html.dark {
+  /* 深色主题全局变量 */
+  --el-bg-color: #1a202c;
+  --el-bg-color-overlay: #2d3748;
+  --el-bg-color-page: #0d1117;
+  --el-text-color-primary: #e2e8f0;
+  --el-text-color-regular: #cbd5e0;
+  --el-text-color-secondary: #a0aec0;
+  --el-text-color-placeholder: #718096;
+  --el-border-color: #4a5568;
+  --el-border-color-light: #2d3748;
+  --el-border-color-lighter: #1a202c;
+  --el-fill-color: #2d3748;
+  --el-fill-color-light: #1a202c;
+  --el-fill-color-lighter: #171923;
+  --el-fill-color-blank: #0d1117;
+  --el-mask-color: rgba(0, 0, 0, 0.8);
+
+  color-scheme: dark;
+}
+
+/* 全局基础样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 自定义滚动条（深色主题） */
+html.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1a202c;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Element Plus 组件样式微调 */
+html.dark {
+  .el-menu {
+    border-right: none !important;
+  }
+
+  .el-card {
+    --el-card-bg-color: var(--el-bg-color-overlay);
+  }
+
+  .el-table {
+    --el-table-bg-color: var(--el-bg-color);
+    --el-table-tr-bg-color: var(--el-bg-color);
+    --el-table-header-bg-color: var(--el-bg-color-overlay);
+    --el-table-row-hover-bg-color: var(--el-fill-color);
+    --el-table-border-color: var(--el-border-color-lighter);
+  }
+
+  .el-dialog {
+    --el-dialog-bg-color: var(--el-bg-color-overlay);
+  }
+
+  .el-drawer {
+    --el-drawer-bg-color: var(--el-bg-color-overlay);
+  }
+
+  .el-input__wrapper {
+    background-color: var(--el-fill-color-lighter) !important;
+  }
+
+  .el-textarea__inner {
+    background-color: var(--el-fill-color-lighter) !important;
+  }
+
+  .el-select .el-input__wrapper {
+    background-color: var(--el-fill-color-lighter) !important;
+  }
+}
+
+/* 工具类 */
+.glass-effect {
+  background: rgba(45, 55, 72, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-right-enter-from {
+  transform: translateX(-20px);
+}
+
+.slide-right-leave-to {
+  transform: translateX(20px);
+}
